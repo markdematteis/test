@@ -4,7 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #layout: home
 layout: default
-title: Demi's Blog
+title: Demi's Blog X
 ---
 <h1>{{ page.title }}</h1>
 <ul>
