@@ -4,7 +4,7 @@
  <title>A Blog</title>
  <link href="http://lanyon.getpoole.com/test/atom.xml" rel="self"/>
  <link href="http://lanyon.getpoole.com/test/"/>
- <updated>2017-09-04T16:35:32-05:00</updated>
+ <updated>2017-09-04T16:45:07-05:00</updated>
  <id>http://lanyon.getpoole.com</id>
  <author>
    <name>Mark Dematteis</name>
@@ -183,7 +183,6 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
