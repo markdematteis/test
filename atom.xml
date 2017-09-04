@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Lanyon</title>
+ <title>A Blog</title>
  <link href="http://lanyon.getpoole.com/test/atom.xml" rel="self"/>
  <link href="http://lanyon.getpoole.com/test/"/>
- <updated>2017-09-04T10:11:33-05:00</updated>
+ <updated>2017-09-04T16:35:32-05:00</updated>
  <id>http://lanyon.getpoole.com</id>
  <author>
-   <name>Mark Otto</name>
-   <email>markdotto@gmail.com</email>
+   <name>Mark Dematteis</name>
+   <email>TBD</email>
  </author>
 
  

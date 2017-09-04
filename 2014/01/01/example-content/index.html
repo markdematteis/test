@@ -11,7 +11,7 @@
 
   <title>
     
-      Example content &middot; Lanyon
+      Example content &middot; A Blog
     
   </title>
 
@@ -30,7 +30,9 @@
 </head>
 
 
-  <body class="theme-base-08">
+   <!--<body class="theme-base-08">-->
+   <body class="sidebar-overlay theme-base-08">
+  
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
@@ -39,7 +41,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+    <p>Under Construction.</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -65,10 +67,20 @@
     
       
     
+      
+        
+          <a class="sidebar-nav-item" href="/test/bloglist/">Blog Index</a>
+        
+      
+    
+      
+        
+      
+    
 
-    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="/archive/v1.0.0 Alpha.zip">Download</a>
     <a class="sidebar-nav-item" href="">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v1.0.0</span>
+    <span class="sidebar-nav-item">Currently v1.0.0 Alpha</span>
   </nav>
 
   <div class="sidebar-item">
@@ -85,8 +97,8 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="/test/" title="Home">Lanyon</a>
-            <small>A Jekyll theme</small>
+            <a href="/test/" title="Home">A Blog</a>
+            <small>Still under construction</small>
           </h3>
         </div>
       </div>
@@ -244,6 +256,44 @@
     
   </ul>
 </div>
+
+
+  <div id="comments">
+    <h2>Comments</h2>
+    <div id="header">
+        Want to leave a comment? Visit <a href="https://github.com/markdematteis/comments/issues/1"> this post's issue page on GitHub</a> (you'll need a GitHub account. What? Like you already don't have one? :).
+    <div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
+  <script type="text/javascript">
+      
+      function loadComments(data) {
+          for (var i=0; i < data.length; i++) {
+              var cuser = data[i].user.login;
+              var cuserlink = "https://www.github.com/" + data[i].user.login;
+              var clink = "https://github.com/markdematteis/comments/issues/1#issuecomment-" + 
+                  data[i].url.substring(data[i].url.lastIndexOf("/") + 1);
+              var cbody = data[i].body_html;
+              var cavatarlink = data[i].user.avatar_url;
+              var cdate = Date.parse(data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
+      
+              $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" 
+                  + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' 
+                  + "</div><a class='commentuser' href=\"" + cuserlink + "\">" 
+                  + cuser + "</a><a class='commentdate' href=\"" + clink 
+                  + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+          }
+      }
+
+      $.ajax("https://api.github.com/repos/markdematteis/comments/issues/1/comments", {
+          headers: {Accept: "application/vnd.github.full+json"},
+          success: function(msg){
+              loadComments(msg);
+          }
+      });
+  </script>
+
 
       </div>
     </div>
