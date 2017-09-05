@@ -260,7 +260,7 @@
   <div id="comments">
     <h2>Comments</h2>
     <div id="header">
-        Want to leave a comment? Visit <a href="https://github.com/markdematteis/comments/issues/1"> this post's issue page on GitHub</a> (you'll need a GitHub account. What? Like you already don't have one? :).
+        Want to leave a comment? Visit <a href="https://github.com/markdematteis/comments/issues/1"> this post's issue page on GitHub</a> (you'll need a GitHub account.).
     <div>
   </div>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -269,19 +269,40 @@
       
       function loadComments(data) {
           for (var i=0; i < data.length; i++) {
+		  	  //alert('data.length: ' + data.length)
               var cuser = data[i].user.login;
+			  //alert('cuser: ' + cuser);
               var cuserlink = "https://www.github.com/" + data[i].user.login;
+			  //alert('cuserlink: ' + cuserlink);
               var clink = "https://github.com/markdematteis/comments/issues/1#issuecomment-" + 
                   data[i].url.substring(data[i].url.lastIndexOf("/") + 1);
+ 			  //alert('clink: ' + clink);
               var cbody = data[i].body_html;
-              var cavatarlink = data[i].user.avatar_url;
-              var cdate = Date.parse(data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
-      
-              $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" 
-                  + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' 
-                  + "</div><a class='commentuser' href=\"" + cuserlink + "\">" 
-                  + cuser + "</a><a class='commentdate' href=\"" + clink 
-                  + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+			  // alert('cbody: ' + cbody);
+              //var cavatarlink = data[i].user.avatar_url;
+			  //alert(cavatarlink);
+			  //var cdate = data[i].created_at;
+			  //var cdate = data[i].created_at.substring(0,10) + ' ' + data[i].created_at.substring(11,19);
+			  //alert('cdate: ' + cdate);	  
+			  var timeString = data[i].created_at.substring(11,19);			 
+              var H = timeString.substr(0, 2);
+              var h = H % 12 || 12;
+              var ampm = H < 12 ? "AM" : "PM";
+              timeString = h + timeString.substr(2, 3) + ' ' + ampm;
+			  var dateString = cdate = data[i].created_at.substring(0,10);
+			  var cdate = dateString + ' at ' + timeString;
+			  
+              $("#comments").append(
+			       "<hr style='height:5px;color:#333;background-color:#333;'>"
+			       + "<div class='comment'>"
+				   + "<div class='commentheader'>" 
+				   //+ "<div class='commentgravatar'> + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' </div>"
+				   + "<div>" + "Comment by : " + "<a class='commentuser' href=\"" + cuserlink + "\">" + cuser + "</a>" + "</div>"
+				   + "<div>" + "When : " + " <a class='commentdate' href=\"" + clink + "\">" + cdate + "</a>" + "</div>"
+				   + "</div>"
+				   + "<div class='commentbody'>" + cbody + "</div>"
+				   + "</div>"
+				   );
           }
       }
 
