@@ -16,6 +16,7 @@
   </title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="/test/public/css/main.css">
   <link rel="stylesheet" href="/test/public/css/poole.css">
   <link rel="stylesheet" href="/test/public/css/syntax.css">
   <link rel="stylesheet" href="/test/public/css/lanyon.css">
@@ -279,7 +280,7 @@
  			  //alert('clink: ' + clink);
               var cbody = data[i].body_html;
 			  // alert('cbody: ' + cbody);
-              //var cavatarlink = data[i].user.avatar_url;
+              var cavatarlink = data[i].user.avatar_url;
 			  //alert(cavatarlink);
 			  //var cdate = data[i].created_at;
 			  //var cdate = data[i].created_at.substring(0,10) + ' ' + data[i].created_at.substring(11,19);
@@ -293,15 +294,15 @@
 			  var cdate = dateString + ' at ' + timeString;
 			  
               $("#comments").append(
-			       "<hr style='height:5px;color:#333;background-color:#333;'>"
-			       + "<div class='comment'>"
+			       //"<hr style='height:5px;color:#333;background-color:#333;'>"
+			       "<div class='comment'>"
 				   + "<div class='commentheader'>" 
-				   //+ "<div class='commentgravatar'> + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' </div>"
-				   + "<div>" + "Comment by : " + "<a class='commentuser' href=\"" + cuserlink + "\">" + cuser + "</a>" + "</div>"
-				   + "<div>" + "When : " + " <a class='commentdate' href=\"" + clink + "\">" + cdate + "</a>" + "</div>"
-				   + "</div>"
+				   + "<div class='commentgravatar'>" + "<img src='" + cavatarlink + "'>" + "</div>"
+				   + "<div><a class='commentuser' href=\"" + cuserlink + "\">" + cuser + "</a>" + "</div>"
+				   + "<div><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a>" + "</div>"
+		           + "</div>"
 				   + "<div class='commentbody'>" + cbody + "</div>"
-				   + "</div>"
+				   + "</div></br>"
 				   );
           }
       }
