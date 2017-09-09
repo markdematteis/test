@@ -4,7 +4,7 @@
  <title>A Blog</title>
  <link href="http://lanyon.getpoole.com/test/atom.xml" rel="self"/>
  <link href="http://lanyon.getpoole.com/test/"/>
- <updated>2017-09-05T10:28:14-05:00</updated>
+ <updated>2017-09-09T17:14:57-05:00</updated>
  <id>http://lanyon.getpoole.com</id>
  <author>
    <name>Mark Dematteis</name>
@@ -182,6 +182,30 @@
 &lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
 
 &lt;hr /&gt;
+&lt;!-- Trigger the modal with a button --&gt;
+&lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-info btn-lg&quot; data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;&gt;Open Modal&lt;/button&gt;&lt;/p&gt;
+
+&lt;!-- Modal --&gt;
+
+&lt;div id=&quot;myModal&quot; class=&quot;modal fade&quot; role=&quot;dialog&quot;&gt;
+  &lt;div class=&quot;modal-dialog&quot;&gt;
+
+    &lt;!-- Modal content--&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot;&gt;&amp;times;&lt;/button&gt;
+        &lt;h4 class=&quot;modal-title&quot;&gt;Modal Header&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;Some text in the modal.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-default&quot; data-dismiss=&quot;modal&quot;&gt;Close&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
 
 </content>
  </entry>

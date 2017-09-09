@@ -3,20 +3,18 @@
 *  COMMENTS
 *
 ********************************/
-
- .comment {
-    background-color: transparent;
-    /*border-color: #CACACA;*/
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    /*color: black;*/
-    display: block;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 0px;
-    width: 100%;
-  } 
+.comment {
+  background-color: transparent;
+  /*border-color: #CACACA;*/
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  /*color: black;*/
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 0px;
+  width: 100%; }
 
 .comment .commentheader {
   border-bottom-color: #black;
@@ -43,8 +41,7 @@
   text-overflow: ellipsis;
   text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
   white-space: nowrap;
-  width: 100%; */
-}
+  width: 100%; */ }
 
 .comment .commentheader .commentgravatar {
   background-attachment: scroll;
@@ -75,8 +72,7 @@
   text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
   vertical-align: middle;
   white-space: nowrap;
-  width: 20px; 
-}
+  width: 20px; }
 
 /* .comment .commentheader a:link {
   text-decoration: none;
@@ -85,60 +81,56 @@
 .comment .commentheader a:hover {
   border-bottom:1px solid;
 } */
-
-
 .comment .commentheader .commentuser {
   margin-bottom: 1em;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 1em;
-/*   background-color: transparent;
-  color: black;
-  display: inline;
-  float: none;
-  font-family: helvetica, arial, freesans, clean, sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: bold;
-  height: 0px;
-  line-height: 16px;
-  margin-left: 5px;
-  margin-right: 10px;
-  overflow-x: visible;
-  overflow-y: visible;
-  padding: 0px;
-  text-overflow: clip;
-  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
-  white-space: nowrap;
-  width: 0px; */
-}
+  /*   background-color: transparent;
+    color: black;
+    display: inline;
+    float: none;
+    font-family: helvetica, arial, freesans, clean, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    height: 0px;
+    line-height: 16px;
+    margin-left: 5px;
+    margin-right: 10px;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0px;
+    text-overflow: clip;
+    text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+    white-space: nowrap;
+    width: 0px; */ }
 
 .comment .commentheader .commentdate {
   margin-bottom: 1em;
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 1em;
-/*   background-color: transparent;
-  color: #777;
-  display: inline;
-  float: none;
-  font-family: helvetica, arial, freesans, clean, sans-serif;
-  font-size: 11px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: normal;
-  height: 0px;
-  line-height: 33px;
-  margin: 0px;
-  overflow-x: visible;
-  overflow-y: visible;
-  padding: 0px;
-  text-overflow: clip;
-  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
-  white-space: nowrap;
-  width: 20em; */
-}
+  /*   background-color: transparent;
+    color: #777;
+    display: inline;
+    float: none;
+    font-family: helvetica, arial, freesans, clean, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 0px;
+    line-height: 33px;
+    margin: 0px;
+    overflow-x: visible;
+    overflow-y: visible;
+    padding: 0px;
+    text-overflow: clip;
+    text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+    white-space: nowrap;
+    width: 20em; */ }
 
 .comment .commentbody {
   background-attachment: scroll;
@@ -152,14 +144,13 @@
   margin-left: 1em;
   margin-right: 1em;
   margin-top: 1em;
- /*margin-top: 40px;*/
+  /*margin-top: 40px;*/
   overflow-x: visible;
   overflow-y: visible;
   padding: 0em;
   position: static;
   width: 96%;
-  word-wrap: break-word;
-}
+  word-wrap: break-word; }
 
 /*
 .comment .commentbody p {
